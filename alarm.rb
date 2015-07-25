@@ -7,6 +7,7 @@ def fancy_sleep(delay)
   delay.times do  |i|
     if i % 10 == 0
         print "#{delay - i}".red
+	puts if i % 60 ==0
     else
         print ".".green
     end
