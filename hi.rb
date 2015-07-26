@@ -3,7 +3,7 @@ require 'sinatra'
 cool_sounds = [
   "Animal/Crickets",
   "Animal/HorseGallop",
-  "Animal/WolfHoul",
+  "Animal/WolfHowl",
   "Effects/Bubbles",
   "Electronic/ComputerBeeps1",
   "Electronic/ComputerBeeps2",
@@ -11,7 +11,7 @@ cool_sounds = [
   "Electronic/Whoop",
   "Human/Laugh-male2",
   "Human/Scream-male1",
-  "Instrument/SpookyString",
+  "Instruments/SpookyString",
   "Percussion/Gong",
   "Vocals/Singer1"
 ]
@@ -37,6 +37,6 @@ end
 
 get '/play' do
   random_sound = cool_sounds[rand(cool_sounds.size)]
-	system('aplay /usr/share/scratch/Media/Sounds/#{random_sound}.wav')
+	system("aplay /usr/share/scratch/Media/Sounds/#{random_sound}.wav")
 	redirect back
 end
